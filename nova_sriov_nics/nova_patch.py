@@ -38,7 +38,6 @@ if not hasattr(api.API, 'NOVA_SRIOV_PHYSNET_PATCHED'):
                 phynet_name = net.get('provider:physical_network')
         return vnic_type, phynet_name
 
-    api.API._get_phynet_info = patched_get_phynet_info
     api.API._get_port_vnic_info = patched_get_port_vnic_info
     setattr(api.API, '_get_port_vnic_info', patched_get_port_vnic_info)
     setattr(api.API, 'NOVA_SRIOV_PHYSNET_PATCHED', True)
