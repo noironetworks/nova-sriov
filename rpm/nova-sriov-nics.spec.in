@@ -1,0 +1,33 @@
+Name:		nova-sriov-nics
+Version:	@VERSION@
+Release:	@RELEASE@%{?dist}
+Summary:	Python patch to Nova API
+License:	ASL 2.0
+URL:		http://github.com/noironetworks/nova-sriov-nics
+Source:		nova-sriov-nics-%{version}.tar.gz
+BuildArch:	noarch
+BuildRequires:	python2-devel
+BuildRequires:	python-pbr
+BuildRequires:	python-setuptools
+
+%description
+Python patch for Nova API Library that provides SRIOV NIC selection for instances
+
+%prep
+%setup -qn nova-sriov-nics-%{version}
+rm -f requirements.txt
+
+%build
+%{__python2} setup.py build
+
+%install
+%{__python2} setup.py install -O1 --install-data / --skip-build --root %{buildroot}
+
+%files
+%doc README.rst
+%{python2_sitelib}/nova-sriov-nics
+%{python2_sitelib}/nova-sriov-nics-%%{version}*.egg-info
+
+%changelog
+* Fri Aug 10 2018 Thomas Bachman <bachman@noironetworks.com> - 1.0.0-1
+- Initial release 

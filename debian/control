@@ -1,0 +1,15 @@
+Source: nova-sriov-nics
+Section: python
+Priority: optional
+Maintainer: Cisco Systems, Inc. <nova-sriov-nics@noironetworks.com>
+Build-Depends: debhelper (>= 9), python-setuptools (>= 3.3), python-all (>= 2.7)
+Standards-Version: 3.9.5
+Homepage: http://github.com/noironetworks/nova-sriov-nics/
+Vcs-Git: git://github.com/noironetworks/nova-sriov-nics.git
+Vcs-Browser: http://github.com/noironetworks/nova-sriov-nics/
+
+Package: python-nova-sriov-nics
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python patch for Nova API
+ Library that provides SRIOV NIC selection for instances
