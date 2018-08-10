@@ -25,8 +25,8 @@ rm -f requirements.txt
 
 %files
 %doc README.rst
-%{python2_sitelib}/nova-sriov-nics
-%{python2_sitelib}/nova-sriov-nics-%%{version}*.egg-info
+%{python2_sitelib}/nova_sriov_nics
+%{python2_sitelib}/nova_sriov_nics-%%{version}*.egg-info
 
 %changelog
 * Fri Aug 10 2018 Thomas Bachman <bachman@noironetworks.com> - 1.0.0-1
