@@ -16,7 +16,7 @@ import setuptools
 
 setuptools.setup(
     name="nova-sriov-nics",
-    version="1.0.0",
+    version="3.0.0",
     packages=setuptools.find_packages(),
     author="Cisco Systems, Inc.",
     author_email="nova-sriov-nics@noironetworks.com",
