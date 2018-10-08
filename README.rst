@@ -16,6 +16,7 @@ monkey_patch_modules=nova_sriov_nics.patch_nova:opflexagent.patch_nova.dummy_dec
 This patch must be applied to to the nova-api server.
 
 The following describes the workflow for SRIOV NIC selection in Nova:
+
 1) Make sure that nova.conf for a given nova-compute has pci_passthrough_whitelist configuration, which places each SRIOV NIC on its own physnet (in /etc/nova/nova.conf):
 [DEFAULT]
 ....
